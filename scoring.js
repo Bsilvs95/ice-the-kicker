@@ -36,6 +36,8 @@ function calculateReturnScore(player) {
 }
 
 module.exports.calculateScore = function (player) {
+
+
   switch (player.position) {
     case 'QB':
       return calculatePassingScore(player) +
@@ -48,6 +50,7 @@ module.exports.calculateScore = function (player) {
     case 'TE':
       return calculateReceivingScore(player)
     default:
-      return 0
+      throw new Error(`Unknown player position (${player.position})`)
   }
 }
+

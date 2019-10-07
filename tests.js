@@ -1,5 +1,5 @@
 var { expect } = require('chai')
-var { describe, it } = require('mocha')
+//var { describe, it } = require('mocha')
 var { calculateScore } = require('./scoring')
 
 describe('calculateScore', () => {
